@@ -1,3 +1,4 @@
+
 # This is a template for a Python scraper on morph.io (https://morph.io)
 # including some code snippets below that you should find helpful
 
@@ -12,6 +13,8 @@ print(html)
 root = lxml.html.fromstring(html)
 root.cssselect("li p a")
 #
+matchedlinks=root.cssselect("li p a")
+print(matchedlinks)
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 #
