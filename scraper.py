@@ -14,7 +14,10 @@ root.cssselect("li p a")
 matchedlinks=root.cssselect("li p a")
 # print(matchedlinks)
 record={}
-for li in matchedlinks[:100]:
+counter=100
+for li in matchedlinks[100:200]:
+  counter=counter+1
+  print(counter)
   listtext=li.text_content()
   print(listtext.encode('utf-8'))
   record['address'] = listtext
