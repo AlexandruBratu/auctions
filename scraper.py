@@ -19,6 +19,7 @@ for li in matchedlinks[:100]:
   print(listtext.encode('utf-8'))
   record['address'] = listtext
   scraperwiki.sqlite.save(['address'],record)
+  record['link'] = li.attrib['href']
 # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
 #
