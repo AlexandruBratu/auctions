@@ -15,7 +15,7 @@ matchedlinks=root.cssselect("li p a")
 # print(matchedlinks)
 record={}
 for li in matchedlinks:
-  listtext=li.text_content()
+  listtext=li.text_content().encode('utf-8')
   print(listtext.encode('utf-8'))
   record['address'] = listtext
   scraperwiki.sqlite.save(['address'],record)
